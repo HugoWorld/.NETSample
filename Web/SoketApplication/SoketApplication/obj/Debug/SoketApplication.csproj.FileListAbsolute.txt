@@ -1,0 +1,8 @@
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\bin\Debug\SoketApplication.exe.config
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\bin\Debug\SoketApplication.exe
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\bin\Debug\SoketApplication.pdb
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\obj\Debug\SoketApplication.csprojResolveAssemblyReference.cache
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\obj\Debug\SoketApplication.Properties.Resources.resources
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\obj\Debug\SoketApplication.csproj.GenerateResource.Cache
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\obj\Debug\SoketApplication.exe
+E:\WPF程序\WPF示例程序\Web\SoketApplication\SoketApplication\obj\Debug\SoketApplication.pdb

@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_TestWinDemo.EventWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_TestWinDemo"
+        mc:Ignorable="d"
+        Title="EventWin" Height="300" Width="300">
+    <Grid Name="gridMain" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+       <Button Name="bt_ChangedName" Width="120" Height="40"
+               Grid.Row="1" Content="修改Student的属性"/> 
+       <Button Name="bt_OriginWPFEvent" Width="120" Height="40"
+               Grid.Row="3" Content="使用WPF的路由事件" Click="bt_OriginWPFEvent_Click"/>
+        <local:TimeButton x:Name="Btn_timer" Width="120" Height="40" Grid.Row="5"
+               ReportTime="ReportTimeHandler" Content="Report Time"/>
+    
+    </Grid>
+</Window>

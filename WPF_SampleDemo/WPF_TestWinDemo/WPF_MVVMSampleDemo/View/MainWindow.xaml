@@ -1,0 +1,86 @@
+﻿<Window x:Class="WPF_MVVMSampleDemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_MVVMSampleDemo"
+        xmlns:cmd="clr-namespace:WPF_MVVMSampleDemo.Command"
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="600" Width="600">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+       <StackPanel Grid.Row="0" Height="40" Margin="0,10,0,10"
+                   Orientation="Horizontal"  HorizontalAlignment="Center" >
+           <Label Width="Auto"
+                  Content="Customer Name" 
+                  FontSize="18"
+                  Margin="20,0,20,0"></Label>
+           <TextBox x:Name="tb_Name" Margin="10,0,10,0" FontSize="18"></TextBox>
+       </StackPanel>
+        <StackPanel Grid.Row="1"
+                    Height="40"
+                    Margin="0,10,0,10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Label Width="Auto"
+                   Content="Sales Amount"
+                   FontSize="18"
+                   Margin="20,0,20,0"></Label>
+            <TextBox x:Name="tb_Amount"
+                     Margin="10,0,10,0"
+                     FontSize="18"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2"
+                    Height="40"
+                    Margin="0,10,0,10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Label Width="Auto"
+                   Content="Buying Habits"
+                   FontSize="18"
+                   Margin="20,0,20,0"></Label>
+            <TextBox x:Name="tb_Habits"
+                     Margin="10,0,10,0"
+                     FontSize="18"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3"
+                    Height="40"
+                    Margin="0,10,0,10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Label Width="Auto"
+                   Content="Married"
+                   FontSize="18"
+                   Margin="20,0,20,0"></Label>
+          <CheckBox Margin="50,0,20,0" Width="auto" 
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"></CheckBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4"
+                    Height="40"
+                    Margin="0,10,0,10"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Label Width="Auto"
+                   Content="Tax"
+                   FontSize="18"
+                   Margin="20,0,20,0"></Label>
+            <Button x:Name="bt_calculate" 
+                     Margin="10,0,10,0"
+                    Width="140"
+                    Command="{Binding  cmd:ButtonCommand}"
+                    Content="Calculate Tax"
+                    Click="Bt_calculate_OnClick"
+                     FontSize="18"></Button>
+        </StackPanel>
+    </Grid>
+</Window>

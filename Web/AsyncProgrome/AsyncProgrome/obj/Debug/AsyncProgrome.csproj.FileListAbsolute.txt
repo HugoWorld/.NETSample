@@ -1,0 +1,14 @@
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\bin\Debug\AsyncProgrome.exe.config
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\bin\Debug\AsyncProgrome.exe
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\bin\Debug\AsyncProgrome.pdb
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\MainWindow.g.cs
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\App.g.cs
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome_MarkupCompile.cache
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome_MarkupCompile.lref
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\MainWindow.baml
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome.g.resources
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome.Properties.Resources.resources
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome.csproj.GenerateResource.Cache
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome.exe
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome.pdb
+E:\WPF程序\WPF示例程序\Web\AsyncProgrome\AsyncProgrome\obj\Debug\AsyncProgrome.csprojResolveAssemblyReference.cache

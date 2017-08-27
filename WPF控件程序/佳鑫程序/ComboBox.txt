@@ -1,0 +1,178 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+                    xmlns:local="clr-namespace:GoSun.HealthCheckClient.Skin"
+                    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna"
+                    mc:Ignorable="d" >
+
+    <!--箭头颜色-->
+    <SolidColorBrush x:Key="ArrowBrush" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="DisabledArrowBrush" Color="#2083d7" />
+    <!-- 下拉框描边颜色 -->
+    <SolidColorBrush x:Key="BorderBrush" Color="#13161a" />
+    <!-- 下拉框底色 -->
+    <SolidColorBrush x:Key="infoBackgroundBrush" Color="#1d446e" Opacity="0.85"/>
+
+    <!--非下拉框、箭头-->
+    <ControlTemplate x:Key="ComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="22" />
+                <ColumnDefinition Width="15" />
+            </Grid.ColumnDefinitions>
+            <Rectangle x:Name="Border" Grid.ColumnSpan="4" StrokeThickness="2" RadiusY="5" RadiusX="5" Stroke="#13161a">
+                <Rectangle.Fill>
+                    <RadialGradientBrush RadiusY="0.95" RadiusX="0.95" Center="0.55,0.431" GradientOrigin="0.501,0.478">
+                        <RadialGradientBrush.RelativeTransform>
+                            <TransformGroup>
+                                <ScaleTransform CenterY="0.5" CenterX="0.5" ScaleY="1" ScaleX="1"/>
+                                <SkewTransform AngleY="0" AngleX="0" CenterY="0.5" CenterX="0.5"/>
+                                <RotateTransform Angle="134.248" CenterY="0.5" CenterX="0.5"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </RadialGradientBrush.RelativeTransform>
+                        <GradientStop Color="#1b3e65" Offset="0.662"/>
+                        <GradientStop Color="#2e6192"/>
+                    </RadialGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+
+            <Path local:ControlAttachProperty.AllowsAnimation="{TemplateBinding IsChecked}" Height="31" Width="22" Grid.Column="2" x:Name="Arrow" Fill="{StaticResource ArrowBrush}" Data="M 2 10 L 11 25 L 20 10 Z">
+                <!--<Path.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Path.RenderTransform>-->
+                <Path.Effect>
+                    <DropShadowEffect BlurRadius="2" Color="#FF0D2D53" Direction="-90" Opacity="0.75" ShadowDepth="1"/>
+                </Path.Effect>
+            </Path>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter TargetName="Arrow" Property="Fill" Value="{StaticResource DisabledArrowBrush}" />
+            </Trigger>
+            <!--<EventTrigger RoutedEvent="Mouse.MouseEnter" SourceName="Border">
+                <BeginStoryboard>
+                    <BeginStoryboard.Storyboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="Arrow">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="60"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard.Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+            <EventTrigger RoutedEvent="Mouse.MouseLeave" SourceName="Border">
+                <BeginStoryboard>
+                    <BeginStoryboard.Storyboard>
+                        <Storyboard>
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="Arrow">
+                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="120"/>
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </BeginStoryboard.Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>-->
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+
+    <Style x:Key="{x:Type ComboBox}" TargetType="{x:Type ComboBox}">
+        <Setter Property="Width" Value="290"/>
+        <Setter Property="Height" Value="68"/>
+        <Setter Property="FontFamily" Value="Microsoft YaHei"/>
+        <Setter Property="FontSize" Value="25"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+        <Setter Property="Foreground" Value="#ffffff"/>
+        <Setter Property="IsEditable" Value="False"/>
+        <Setter Property="IsSynchronizedWithCurrentItem" Value="False"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <VirtualizingStackPanel HorizontalAlignment="Center" VerticalAlignment="Center" VirtualizingStackPanel.IsVirtualizing="True"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <Grid>
+                        <ToggleButton x:Name="ToggleButton" Template="{StaticResource ComboBoxToggleButton}"
+                             IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" ClickMode="Press" />
+                        <!-- 20161116 姚佳鑫：点击文字不能穿透传递点击事件，IsHitTestVisible="False"后就能实现 -->
+                        <ContentPresenter x:Name="ContentSite" Content="{TemplateBinding SelectionBoxItem}" IsHitTestVisible="False"
+              ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+              Margin="20,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                        <Popup x:Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}"
+              AllowsTransparency="True" PopupAnimation="Slide" >
+                            <Grid x:Name="DropDown" SnapsToDevicePixels="True" MinWidth="{TemplateBinding ActualWidth}"
+                MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                <Border CornerRadius="5" x:Name="DropDownBorder" Background="{StaticResource infoBackgroundBrush}" SnapsToDevicePixels="True"
+                  BorderThickness="1" BorderBrush="{StaticResource BorderBrush}" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{TemplateBinding ActualWidth}">
+                                    <!-- 20161116 姚佳鑫：滚动条存在最下面有残留的空白位置，发现设置style为null也会，经排查发现是Height的问题，设置成刚好几个元素的高度就好。添加CanContentScroll="True"则最后不会留白 -->
+                                    <ScrollViewer CanContentScroll="True" Height="344" Width="290" SnapsToDevicePixels="True" Template="{DynamicResource ScrollViewerControlTemplate1}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                        <StackPanel KeyboardNavigation.DirectionalNavigation="Contained" IsItemsHost="True" />
+                                    </ScrollViewer>
+                                </Border>
+                            </Grid>
+                        </Popup>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+    <!-- SimpleStyles: ComboBoxItem 下拉框内容-->
+    <Style x:Key="{x:Type ComboBoxItem}" TargetType="{x:Type ComboBoxItem}">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="RenderOptions.ClearTypeHint" Value="Enabled" />
+        <Setter Property="SnapsToDevicePixels" Value="true"/>
+        <Setter Property="OverridesDefaultStyle" Value="true"/>
+        <Setter Property="FontSize" Value="22"/>
+        <Setter Property="Foreground" Value="#95cdfd"/>
+        <Setter Property="Opacity" Value="0.80"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Border Margin="-2,0" x:Name="OuterBorder" BorderThickness="0" BorderBrush="{StaticResource BorderBrush}">
+                        <Grid Background="Transparent" Height="68" Width="290">
+                            <Canvas x:Name="Border" Background="Transparent" Opacity="0" Height="68" Width="290"/>
+                            <ContentPresenter VerticalAlignment="Center" Margin="20,0,0,0"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHighlighted" Value="true">
+                            <Setter Property="Foreground" Value="#ffffff"/>
+                            <Setter Property="Opacity" Value="0.8"/>
+                            <Setter TargetName="Border" Property="Opacity" Value="1"/>
+                            <Setter TargetName="OuterBorder" Property="BorderThickness" Value="2"/>
+                            <Setter TargetName="Border" Property="Background" Value="#2083d7"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

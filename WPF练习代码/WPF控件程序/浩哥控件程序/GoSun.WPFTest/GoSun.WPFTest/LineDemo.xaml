@@ -1,8 +1,0 @@
-﻿<Window x:Class="GoSun.WPFTest.LineDemo"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="LineDemo" Height="300" Width="300">
-    <Grid x:Name="grid">
-        <Image x:Name="img" Source="/Images/巡逻路线地图.png"  Stretch="Fill"/>
-    </Grid>
-</Window>
